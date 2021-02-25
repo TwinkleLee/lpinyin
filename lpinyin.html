@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>lpinyin demo</title>
+</head>
+
+<body>
+
+
+</body>
+
+<script type="module">
+  import lpinyin from "./lpinyin.js";
+  var obj_arr = [
+    { name: "张三", age: 18 },
+    { name: "李四", age: 20 },
+    { name: "家乐福", age: 100 },
+  ];
+  var myLpinyin = new lpinyin(obj_arr, "name");
+  var filterData1 = myLpinyin.query("jiayuef");
+  console.log("组合", filterData1);
+
+  var filterData2 = myLpinyin.query("jyf", 1);
+  console.log("首字母", filterData2);
+
+  var filterData3 = myLpinyin.query("jialefu", 2);
+  console.log("全拼", filterData3);
+</script>
+
+<script>
+  import("./lpinyin.js").then(content => {
+    var lpinyin = content.default;
+    var obj_arr = [
+      { name: "张三", age: 18 },
+      { name: "李四", age: 20 },
+      { name: "家乐福", age: 100 },
+    ];
+    var myLpinyin = new lpinyin(obj_arr, "name");
+    var filterData1 = myLpinyin.query("jiayuef");
+    console.log("组合", filterData1);
+
+    var filterData2 = myLpinyin.query("jyf", 1);
+    console.log("首字母", filterData2);
+
+    var filterData3 = myLpinyin.query("jialefu", 2);
+    console.log("全拼", filterData3);
+  });
+
+
+</script>
+
+</html>

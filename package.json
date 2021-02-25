@@ -1,0 +1,19 @@
+{
+  "name": "lpinyin",
+  "version": "1.1.1",
+  "description": "用于首字母/全拼音的模糊查询",
+  "main": "lpinyin.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "拼音",
+    "模糊",
+    "前端",
+    "pingyin",
+    "搜索",
+    "search"
+  ],
+  "author": "TwinkleLee",
+  "license": "MIT"
+}
